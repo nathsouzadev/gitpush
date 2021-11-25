@@ -1,12 +1,8 @@
-echo "Commit name: "
+read -p "Commit description: " commitName
 
-read $commitName
+git add . && \
 
-git add .
-wait
-
-git commit -m $commitName
-wait
+git commit -m "$commitName" && \
 
 git push
 wait
